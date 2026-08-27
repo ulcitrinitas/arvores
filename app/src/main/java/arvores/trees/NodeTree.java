@@ -4,9 +4,9 @@ public class NodeTree {
 
     int item;
 
-    NodeTree parent;
-    NodeTree firstChild;
-    NodeTree next;
+    public NodeTree parent;
+    public NodeTree firstChild;
+    public NodeTree next;
 
     public NodeTree() {
         this.item = 0;

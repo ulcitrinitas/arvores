@@ -2,9 +2,9 @@ package arvores.trees;
 
 public class Tree {
 
-    NodeTree root;
+    public NodeTree root;
 
-    int size;
+    public int size;
 
     public Tree() {
         this.root = null;
