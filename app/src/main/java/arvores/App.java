@@ -3,12 +3,23 @@
  */
 package arvores;
 
+import arvores.trees.*;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        var tree = new Tree();
+
+        var treeNode = tree.insertRoot(500);
+
+        Pprint.genDecorations(30);
+
+        System.out.println("Raíz da árvore: " + treeNode);
+        System.out.println("Valor da raíz: " + treeNode.getItem());
+
+        Pprint.genDecorations(30);
+
+        System.out.println("Raíz: " + tree.getRoot());
+        System.out.println("Tamanho da árvore: " + tree.getSize());
     }
 }
