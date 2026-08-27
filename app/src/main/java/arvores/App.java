@@ -7,24 +7,31 @@ public class App {
     public static void main(String[] args) {
         var tree = new Tree();
 
-        var treeNode = tree.insertRoot(500);
+        tree.insertRoot(0);
 
-        Pprint.genDecorations(30);
+        var no_1 = new NodeTree(1);
+        var no_2 = new NodeTree(2);
+        var no_3 = new NodeTree(3);
+        var no_4 = new NodeTree(4);
+        var no_5 = new NodeTree(5);
 
-        System.out.println("Raíz da árvore: " + treeNode);
-        System.out.println("Valor da raíz: " + treeNode.getItem());
+        tree.root.firstChild = no_1;
+        no_1.parent = tree.root;
+        no_1.next = no_2;
 
-        Pprint.genDecorations(30);
+        no_2.parent = tree.root;
+        no_2.next = no_3;
 
-        System.out.println("Raíz: " + tree.getRoot());
-        System.out.println("Tamanho da árvore: " + tree.getSize());
+        no_3.parent = tree.root;
 
-        Pprint.genDecorations(30);
+        no_2.firstChild = no_4;
+        no_4.parent = no_2;
 
-        var root = tree.insertRoot(15);
+        no_4.next = no_5;
+        no_5.parent = no_2;
 
-        System.out.println("Raíz: " + root);
-        System.out.println("Raíz: " + tree.getRoot());
-        System.out.println("Tamanho da árvore: " + tree.getSize());
+        tree.root.preorder();
+        System.out.println("");
+
     }
 }
