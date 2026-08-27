@@ -97,4 +97,16 @@ public class NodeTree {
         return 1 + h;
     }
 
+    public void preorder(){
+        System.out.println(this.item);
+
+        NodeTree trab = this.firstChild;
+
+        while (trab != null) {
+            
+            trab.preorder();
+            trab = trab.next;
+        }
+    }
+
 }
