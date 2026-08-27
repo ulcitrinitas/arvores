@@ -98,7 +98,7 @@ public class NodeTree {
     }
 
     public void preorder(){
-        System.out.println(this.item);
+        System.out.print(" " + this.item);
 
         NodeTree trab = this.firstChild;
 
