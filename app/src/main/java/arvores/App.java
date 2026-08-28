@@ -33,5 +33,12 @@ public class App {
         tree.root.preorder();
         System.out.println("");
 
+        Pprint.genDecorations(30);
+
+        tree.root.postorder();
+        System.out.println("");
+
+        Pprint.genDecorations(30);
+
     }
 }
