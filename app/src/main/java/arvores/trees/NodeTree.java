@@ -109,4 +109,17 @@ public class NodeTree {
         }
     }
 
+    public void postorder(){
+        var trab = this.firstChild;
+
+        while (trab != null) {
+
+            trab.postorder();
+            trab = trab.next;
+        }
+
+        System.out.print(this.item + " ");
+
+    }
+
 }
