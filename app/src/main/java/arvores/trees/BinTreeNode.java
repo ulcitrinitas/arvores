@@ -53,6 +53,20 @@ public class BinTreeNode {
         return true;
     }
 
+    public void binaryPreorder(){
+        
+        System.out.println(this.item + " ");
+
+        if(this.isLeft()){
+            this.left.binaryPreorder();
+        }
+
+        if(this.isRight()){
+            this.binaryPreorder();
+        }
+
+    }
+
 
     
 }
