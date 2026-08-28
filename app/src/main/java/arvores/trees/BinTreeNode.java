@@ -1,17 +1,23 @@
 package arvores.trees;
 
+import java.util.ArrayList;
+
 public class BinTreeNode {
 
     public int item;
-    BinTreeNode parent;
-    BinTreeNode left;
-    BinTreeNode right;
+    public BinTreeNode parent;
+    public BinTreeNode left;
+    public BinTreeNode right;
+
+    ArrayList<Integer> binItens;
 
     public BinTreeNode(){
         this.item = 0;
         this.parent = null;
         this.left = null;
         this.right = null;
+
+        this.binItens = new ArrayList<Integer>();
     }
 
     public BinTreeNode(int val){
@@ -19,6 +25,8 @@ public class BinTreeNode {
         this.parent = null;
         this.left = null;
         this.right = null;
+
+        this.binItens = new ArrayList<Integer>();
     }
 
     public BinTreeNode left(){
@@ -65,6 +73,32 @@ public class BinTreeNode {
             this.binaryPreorder();
         }
 
+    }
+
+    public void binaryPostorder(){
+        
+        if(this.isLeft()){
+            this.left.binaryPreorder();
+        }
+
+        if(this.isRight()){
+            this.binaryPreorder();
+        }
+
+        System.out.println(this.item + " ");
+
+    }
+
+    public void binaryInorder(){
+        if (this.isLeft()) {
+            this.left.binaryPreorder();
+        }
+
+        System.out.println(this.item + " ");
+
+        if (this.isRight()) {
+            this.binaryPreorder();
+        }
     }
 
 
