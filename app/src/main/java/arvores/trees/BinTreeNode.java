@@ -11,7 +11,7 @@ public class BinTreeNode {
 
     ArrayList<Integer> binItens;
 
-    public BinTreeNode(){
+    public BinTreeNode() {
         this.item = 0;
         this.parent = null;
         this.left = null;
@@ -20,7 +20,7 @@ public class BinTreeNode {
         this.binItens = new ArrayList<Integer>();
     }
 
-    public BinTreeNode(int val){
+    public BinTreeNode(int val) {
         this.item = val;
         this.parent = null;
         this.left = null;
@@ -29,75 +29,75 @@ public class BinTreeNode {
         this.binItens = new ArrayList<Integer>();
     }
 
-    public BinTreeNode left(){
-        if(this.left == null){
+    public BinTreeNode left() {
+        if (this.left == null) {
             return null;
         }
 
         return this.left;
     }
 
-    public BinTreeNode right(){
-        if(this.right == null){
+    public BinTreeNode right() {
+        if (this.right == null) {
             return null;
         }
 
         return this.right;
     }
 
-    public boolean isLeft(){
-        if(this.left == null){
+    public boolean isLeft() {
+        if (this.left == null) {
             return false;
         }
 
         return true;
     }
 
-    public boolean isRight(){
-        if(this.right == null){
+    public boolean isRight() {
+        if (this.right == null) {
             return false;
         }
 
         return true;
     }
 
-    public void binaryPreorder(){
-        
-        System.out.println(this.item + " ");
+    public void binaryPreorder() {
 
-        if(this.isLeft()){
-            this.left.binaryPreorder();
-        }
+        System.out.print(this.item + " ");
 
-        if(this.isRight()){
-            this.binaryPreorder();
-        }
-
-    }
-
-    public void binaryPostorder(){
-        
-        if(this.isLeft()){
-            this.left.binaryPreorder();
-        }
-
-        if(this.isRight()){
-            this.binaryPreorder();
-        }
-
-        System.out.println(this.item + " ");
-
-    }
-
-    public void binaryInorder(){
         if (this.isLeft()) {
             this.left.binaryPreorder();
         }
 
-        System.out.println(this.item + " ");
+        if (this.isRight()) {
+            this.right.binaryPreorder();
+        }
+
+    }
+
+    public void binaryPostorder() {
+
+        if (this.isLeft()) {
+            this.left.binaryPreorder();
+        }
 
         if (this.isRight()) {
-            this.binaryPreorder();
+            this.right.binaryPreorder();
+        }
+
+        System.out.print(this.item + " ");
+
+    }
+
+    public void binaryInorder() {
+        if (this.isLeft()) {
+            this.left.binaryPreorder();
+        }
+
+        System.out.print(this.item + " ");
+
+        if (this.isRight()) {
+            this.right.binaryPreorder();
         }
     }
 
