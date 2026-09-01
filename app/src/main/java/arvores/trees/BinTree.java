@@ -2,8 +2,8 @@ package arvores.trees;
 
 public class BinTree {
     
-    BinTreeNode root;
-    int size;
+    public BinTreeNode root;
+    public int size;
 
     public BinTree(){
         this.root = null;
